@@ -1,0 +1,10 @@
+
+/* Input select common styling here */
+
+/* style class for changing bg, heigh and borders for the inputs, select and other form inputs */
+.shadcn-form-input {
+    border-radius: 8px;
+    height: 48px;
+    font-size: 14px;
+    background-color:var(--input-background) !important;
+}

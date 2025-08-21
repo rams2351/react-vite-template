@@ -1,0 +1,90 @@
+@import "tailwindcss" important;
+
+@custom-variant dark (&:is(.dark *));
+
+/* Custom theme options */
+@theme {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    
+    /* Primary text color */
+    --color-primary: var(--primary);
+   --color-primary-foreground: var(--primary-foreground);
+
+   --color-secondary: var(--secondary);
+   --color-secondary-foreground: var(--secondary-foreground);
+
+   --color-muted: var(--muted);
+   --color-muted-foreground: var(--muted-foreground);
+
+   --color-accent: var(--accent);
+   --color-accent-foreground: var(--accent-foreground);
+
+   --color-destructive: var(--destructive);
+   --color-destructive-foreground: var(--destructive-foreground);
+
+   --color-border: var(--border);
+   --color-input: var(--input);
+   --color-ring: var(--ring);
+}
+
+/* Colors based on tailwindcss colors for dark and light mode */
+
+ @layer base {
+  :root {
+    --background: rgb(255, 255, 255);                 /* white */
+    --foreground: rgb(28, 28, 31);                    /* dark gray (approx 222.2 47.4% 11.2%) */
+
+    --primary: rgb(59, 130, 246);                     /* blue-500 */
+    --primary-foreground: rgb(240, 245, 255);         /* soft white */
+
+    --secondary: rgb(241, 245, 249);                  /* light gray (approx 210 40% 96.1%) */
+    --secondary-foreground: rgb(28, 28, 31);
+
+    --muted: rgb(241, 245, 249);
+    --muted-foreground: rgb(136, 142, 152);           /* approx 215.4 16.3% 46.9% */
+
+    --accent: rgb(241, 245, 249);
+    --accent-foreground: rgb(28, 28, 31);
+
+    --destructive: rgb(239, 68, 68);                  /* red-500 */
+    --destructive-foreground: rgb(240, 245, 255);
+
+    --border: rgb(229, 231, 235);                     /* gray-200 */
+    --input: rgb(229, 231, 235);
+    --ring: rgb(147, 197, 253);                       /* blue-300 */
+  }
+
+  .dark {
+    --background: rgb(28, 28, 31);                    /* dark gray */
+    --foreground: rgb(240, 245, 255);                 /* light text */
+
+    --primary: rgb(147, 197, 253);                    /* blue-300 */
+    --primary-foreground: rgb(28, 28, 31);
+
+    --secondary: rgb(38, 38, 42);                     /* darker gray */
+    --secondary-foreground: rgb(240, 245, 255);
+
+    --muted: rgb(38, 38, 42);
+    --muted-foreground: rgb(160, 160, 170);           /* light muted gray */
+
+    --accent: rgb(38, 38, 42);
+    --accent-foreground: rgb(240, 245, 255);
+
+    --destructive: rgb(220, 38, 38);                  /* red-600 */
+    --destructive-foreground: rgb(240, 245, 255);
+
+    --border: rgb(64, 64, 70);                        /* dark border */
+    --input: rgb(64, 64, 70);
+    --ring: rgb(96, 165, 250);                        /* blue-400 */
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  input::placeholder {
+    color: var(--muted-foreground); /* same as --muted-foreground */
+  }
+}
